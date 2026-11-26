@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "TableSnap — Web Table & List to CSV, Excel, Markdown",
+  "short_name": "TableSnap",
+  "version": "1.0.0",
+  "description": "Extract any HTML table or repeating product/data list to clean CSV, Markdown, or JSON in one click. 100% local & private.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.gumroad.com/*"
+  ],
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "TableSnap — Extract Tables & Lists",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  }
+}

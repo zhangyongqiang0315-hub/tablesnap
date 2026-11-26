@@ -1,0 +1,13 @@
+# Distribution archives (do not commit)
+*.zip
+*.crx
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Logs
+*.log

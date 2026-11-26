@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TableSnap</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <span class="logo">TS</span>
+        <div>
+          <h1>TableSnap</h1>
+          <p class="subtitle">100% Local Table &amp; List Extractor</p>
+        </div>
+      </div>
+      <button id="proBadgeBtn" class="badge badge-free" title="Activate Pro License">
+        FREE
+      </button>
+    </header>
+
+    <section id="statusBar" class="status-bar">
+      Scanning current page...
+    </section>
+
+    <section id="controlsSection" class="panel hidden">
+      <div class="row-between">
+        <label for="targetSelect" class="label">Detected Data</label>
+        <span id="metaStats" class="meta">0 rows × 0 cols</span>
+      </div>
+      <select id="targetSelect" class="select"></select>
+
+      <div class="preview-wrap">
+        <table id="previewTable" class="preview-table"></table>
+      </div>
+
+      <div class="actions-group">
+        <div class="group-title">Free Export</div>
+        <div class="btn-grid">
+          <button id="copyMdBtn" class="btn btn-primary">Copy Markdown</button>
+          <button id="downloadCsvBtn" class="btn btn-secondary">Download CSV</button>
+        </div>
+      </div>
+
+      <div class="actions-group">
+        <div class="group-title">
+          Pro Features
+          <span class="pro-tag">PRO</span>
+        </div>
+        <div class="btn-grid">
+          <button id="downloadJsonBtn" class="btn btn-outline">Download JSON</button>
+          <button id="exportAllBtn" class="btn btn-outline">Export All Tables</button>
+        </div>
+        <label class="checkbox-row">
+          <input type="checkbox" id="cleanNumbersChk" />
+          <span>Clean currency &amp; extra symbols (Pro)</span>
+        </label>
+      </div>
+    </section>
+
+    <section id="emptySection" class="empty hidden">
+      <p>No HTML tables or repeating lists detected on this page.</p>
+      <button id="rescanBtn" class="btn btn-secondary">Rescan Page</button>
+    </section>
+
+    <section id="licenseModal" class="modal hidden">
+      <div class="modal-card">
+        <div class="row-between">
+          <h2>Activate TableSnap Pro</h2>
+          <button id="closeModalBtn" class="icon-btn" aria-label="Close">✕</button>
+        </div>
+        <p class="modal-desc">
+          Unlock Smart List extraction, JSON export, batch multi-table export, and symbol cleaning.
+        </p>
+        <input
+          id="licenseInput"
+          type="text"
+          class="input"
+          placeholder="Paste Gumroad License Key..."
+        />
+        <div id="licenseMsg" class="license-msg"></div>
+        <div class="btn-grid">
+          <button id="activateBtn" class="btn btn-primary">Verify &amp; Activate</button>
+          <a id="buyProLink" href="#" target="_blank" class="btn btn-secondary link-btn">
+            Get Pro Key
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
